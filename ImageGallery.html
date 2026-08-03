@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="buttons">
+        <button onclick="filterSelection('all')">All</button>
+        <button onclick="filterSelection('nature')">Nature</button>
+        <button onclick="filterSelection('animals')">Animals</button>
+    </div>
+
+    <main>
+
+        <div class="gallery">
+
+            <div class="image nature">
+                <img src= "https://discovermalaysia-unesco.com/wp-content/uploads/2024/12/Raban-Lake-5-600x403.jpg" alt="Nature 1" onclick="openLightbox(0)">
+            </div>
+
+            <div class="image nature">
+                <img src="https://picsum.photos/id/1040/400/300" alt="Nature 2" onclick="openLightbox(1)">
+            </div>
+
+            <div class="image animals">
+                <img src="https://picsum.photos/id/1025/400/300" alt="Animal 1" onclick="openLightbox(2)">
+            </div>
+
+            <div class="image animals">
+                <img src="https://picsum.photos/id/237/400/300" alt="Animal 2" onclick="openLightbox(3)">
+            </div>
+
+            <div class="image nature">
+                <img src="https://picsum.photos/id/1015/400/300" alt="Nature 3" onclick="openLightbox(4)">
+            </div>
+
+            <div class="image animals">
+                <img src="https://picsum.photos/id/1074/400/300" alt="Animal 3" onclick="openLightbox(5)">
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+        <img id="lightbox-img" alt="Gallery Image">
+
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Image Gallery | Developed by <strong>Afreen Banu A</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
